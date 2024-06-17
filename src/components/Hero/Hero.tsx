@@ -17,7 +17,9 @@ import {
 export default function Hero() {
   return (
     <>
+      {/* Large container (like a div) that automatcally centers content and creates nice margins */}
       <Container maxW={"3xl"}>
+        {/* Stack for the main heading and smaller text below it. Total of 2 items in the stack */}
         <Stack
           as={Box}
           textAlign={"center"}
@@ -39,6 +41,7 @@ export default function Hero() {
             and add them to your wishlist or simply view more information about the brand, cost, or
             specific scents.
           </Text>
+          {/* Second stack containing the green "Get Started" button, "Learn more" link, and "100% free" arrow */}
           <Stack
             direction={"column"}
             spacing={3}
@@ -60,6 +63,10 @@ export default function Hero() {
             <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
               Learn more
             </Button>
+            {/*
+            Notice the manipulation of the Icon and Text tags in this box to make the arrow not centered.
+            Ex: The position, right, top, transform props below
+            */}
             <Box>
               <Icon
                 as={Arrow}
@@ -87,6 +94,10 @@ export default function Hero() {
   );
 }
 
+/**
+ * Function for creating the arrow tha points to the get started button.
+ * Very specific and not important to fully understand.
+ */
 const Arrow = createIcon({
   displayName: "Arrow",
   viewBox: "0 0 72 24",
