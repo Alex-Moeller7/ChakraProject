@@ -29,6 +29,10 @@ const Logo = (props: any) => {
   );
 };
 
+/**
+ * Create a social button with props of childrem, label, and href foruse in footer where various social media icons are shown
+ * @returns
+ */
 const SocialButton = ({
   children,
   label,
@@ -55,6 +59,7 @@ const SocialButton = ({
         bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       }}
     >
+      {/* The VisuallyHidden tag hides whatever is inside of it from actually rendering on screen */}
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </chakra.button>
@@ -63,13 +68,20 @@ const SocialButton = ({
 
 export default function Footer() {
   return (
+    // parent element of box that sets background colors
     <Box
       bg={useColorModeValue("gray.1000", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
+      {/* 
+      Parent element container but being used "as={stack}". Note the inline styling shorthands.
+      This container holds the top half of the footer so the fake logo and then mini navbar links (Home, Gallery, etc.)
+      */}
       <Container as={Stack} maxW={"6xl"} py={4} spacing={4} justify={"center"} align={"center"}>
         <Logo />
+        {/* The actual stack with direction of row because it is a footer and should span the whole width of the page */}
         <Stack direction={"row"} spacing={6}>
+          {/* Each box contains one of the elements inthe stack, namely the 4 pages: Home, Gallery, My Collection, About */}
           <Box as="a" href={"#"}>
             Home
           </Box>
@@ -85,6 +97,7 @@ export default function Footer() {
         </Stack>
       </Container>
 
+      {/* new box for the bottom portion of the footer that contain the @ 2024 Fragrance foundry All rights reserved */}
       <Box
         borderTopWidth={1}
         borderStyle={"solid"}
@@ -100,6 +113,7 @@ export default function Footer() {
           align={{ base: "center", md: "center" }}
         >
           <Text>© 2024 Fragrance Foundry. All rights reserved</Text>
+          {/* Stack of the 3 social icon buttons */}
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />
