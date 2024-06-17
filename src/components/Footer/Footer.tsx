@@ -74,13 +74,13 @@ export default function Footer() {
             Home
           </Box>
           <Box as="a" href={"#"}>
+            Gallery
+          </Box>
+          <Box as="a" href={"#"}>
+            My Collection
+          </Box>
+          <Box as="a" href={"#"}>
             About
-          </Box>
-          <Box as="a" href={"#"}>
-            Blog
-          </Box>
-          <Box as="a" href={"#"}>
-            Contact
           </Box>
         </Stack>
       </Container>
@@ -99,7 +99,7 @@ export default function Footer() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>© 2024 Fragrance Foundry. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />

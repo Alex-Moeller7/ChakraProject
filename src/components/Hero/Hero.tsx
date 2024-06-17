@@ -29,15 +29,15 @@ export default function Hero() {
             fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
           >
-            Make money from <br />
+            Build your <br />
             <Text as={"span"} color={"green.400"}>
-              your audience
+              Fragrance Collection
             </Text>
           </Heading>
           <Text color={"gray.500"}>
-            Monetize your content by charging your most loyal readers and reward them loyalty
-            points. Give back to your loyal readers by granting them access to your pre-releases and
-            sneak-peaks.
+            Collect fragrances and add them to your collection. Search from hundreds of fragrances
+            and add them to your wishlist or simply view more information about the brand, cost, or
+            specific scents.
           </Text>
           <Stack
             direction={"column"}
@@ -77,7 +77,7 @@ export default function Hero() {
                 top={"-15px"}
                 transform={"rotate(10deg)"}
               >
-                Starting at $15/mo
+                100% Free!
               </Text>
             </Box>
           </Stack>
