@@ -36,7 +36,7 @@ const NavLink = ({ children }: { children: React.ReactNode }) => {
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: useColorModeValue("gray.100", "gray.700"),
       }}
       href={"#"}
     >
@@ -51,7 +51,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box bg={useColorModeValue("gray.1000", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           {/* The horizontal Stack (row of items) holding the picture */}
           <HStack spacing={8} alignItems={"center"}>
