@@ -16,6 +16,10 @@ import {
 import { ReactElement } from "react";
 import { FcAbout, FcAssistant, FcCollaboration, FcDonate, FcManager } from "react-icons/fc";
 
+/**
+ * Define an interface with 4 mandatory parts. TS allows for type declaration like Java
+ * Ex: "heading: string;" says that the property heading must be of type string
+ */
 interface CardProps {
   heading: string;
   description: string;
@@ -23,6 +27,10 @@ interface CardProps {
   href: string;
 }
 
+/**
+ * Create basic card to be reused down below
+ * @returns One single Card with an icon, heading, subtext, and "learn more" button
+ */
 const Card = ({ heading, description, icon, href }: CardProps) => {
   return (
     <Box
@@ -61,7 +69,9 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
 
 export default function IntroCards() {
   return (
+    // Large box to contain the cards in
     <Box p={4}>
+      {/* Stack of two items (heading and text) for the titel of the IntroCards section*/}
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
           Start Your Collection
@@ -71,8 +81,14 @@ export default function IntroCards() {
         </Text>
       </Stack>
 
+      {/* Container for the three cards */}
       <Container maxW={"5xl"} mt={12}>
+        {/* 
+        Flex is basically just a div with the "display: flex;" property.
+        It comes with some helpful styling shorthands as seen below.
+        */}
         <Flex flexWrap="wrap" gridGap={6} justify="center">
+          {/* 3 instances of the Card component created above. Notice how all 4 properties (heading, icon, description, href) must be set to match the definition. */}
           <Card
             heading={"Discover"}
             icon={<Icon as={FcAssistant} w={10} h={10} />}

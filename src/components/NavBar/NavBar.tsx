@@ -57,7 +57,7 @@ export default function NavBar() {
           <HStack spacing={8} alignItems={"center"}>
             <Box>
               <img
-                src="src\assets\fragranceBtl.jpg"
+                src="src\assets\fragranceBottlev2.jpg"
                 alt="Fragrance Icon"
                 style={{ height: "3rem" }}
               />
