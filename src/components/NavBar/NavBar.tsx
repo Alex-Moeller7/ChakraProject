@@ -45,7 +45,7 @@ const NavLink = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default function Header() {
+export default function NavBar() {
   //Custom hook from Chakra
   const { isOpen, onOpen, onClose } = useDisclosure();
 

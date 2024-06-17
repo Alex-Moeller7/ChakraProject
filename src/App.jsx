@@ -1,9 +1,15 @@
 import { useState } from "react";
+
+import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
 
 function App() {
-  return <Header />;
+  return (
+    <>
+      <Navbar />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
